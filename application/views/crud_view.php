@@ -18,6 +18,8 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevo_usuario_mascota">
             Añadir Usuario Mascota
         </button>
+
+        <button id="boton_prueba">click</button>
     </div>
     <div class="container">
         <div class="col-md-10 offset">
@@ -82,8 +84,8 @@
                                     <a class="btn btn-info" href="<?php echo "/CrudController/editMascota/$row->idmascota" ?>">
                                         EDITAR</a>
                                     <a class="btn btn-danger" href="<?php echo "/CrudController/delete_mascota/$row->idmascota" ?>">Eliminar</a>
+                                    <button id="button">clicks</button>
                                 </td>
-
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -121,7 +123,7 @@
                                 <td>
                                     <a class="btn btn-info" href="<?php echo "/CrudController/edit/$row->id" ?>">
                                         EDITAR</a>
-                                    <a class="btn btn-danger" href="<?php echo "/CrudController/delete_user/$row->id" ?>">Eliminar</a>
+                                    <a id="eliminar_usuario" class="btn btn-danger" href="<?php echo "/CrudController/delete_user/$row->id" ?>">Eliminar</a>
                                 </td>
 
                             </tr>
@@ -216,7 +218,7 @@
                                 <option value="<?php echo $row->id ?>">
                                     <?php echo $row->firstname ?>
                                 </option>
-                            <?php } ?>  
+                            <?php } ?>
                         </select>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -293,6 +295,19 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <script>
+        let eliminar_usuario = document.querySelector("#eliminar_usuario");
+        eliminar_usuario.addEventListener('click', function(e) {
+            
+            if((confirm('¿Esta seguro que quiere eliminar este registro?\n(se van a borrar tambien sus mascotas)'))){
+                alert('Usuario eliminado')
+            }else{
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 
 </html>
