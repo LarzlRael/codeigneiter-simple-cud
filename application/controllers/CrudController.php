@@ -65,9 +65,12 @@ class CrudController extends CI_Controller
         redirect('CrudController');
     }
 
-    public function editMascota($id)
+    public function editMascota($id,$idusuario)
     {
         $data['row'] = $this->Crud_mascota->get_mascota($id);
+        $data['usuario'] = $this->Crud_model->getData($id);
+        $data['usuarios'] = $this->Crud_model->getAllData();
+
         $this->load->view('crud_mascota',$data);
     }
 

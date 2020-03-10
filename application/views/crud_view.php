@@ -19,7 +19,9 @@
             Añadir Usuario Mascota
         </button>
 
-        <button id="boton_prueba">click</button>
+        
+        
+
     </div>
     <div class="container">
         <div class="col-md-10 offset">
@@ -81,10 +83,10 @@
                                 <td><?php echo $row->nombre_mascota; ?></td>
                                 <td><?php echo $row->direccion; ?></td>
                                 <td>
-                                    <a class="btn btn-info" href="<?php echo "/CrudController/editMascota/$row->idmascota" ?>">
+                                    <a class="btn btn-info" href="<?php echo "/CrudController/editMascota/$row->idmascota/$row->idusuario" ?>">
                                         EDITAR</a>
                                     <a class="btn btn-danger" href="<?php echo "/CrudController/delete_mascota/$row->idmascota" ?>">Eliminar</a>
-                                    <button id="button">clicks</button>
+                                    
                                 </td>
                             </tr>
                         <?php } ?>
@@ -216,12 +218,12 @@
                         <select name="idusuario" id="" class="form-control">
                             <?php foreach ($result as $row) { ?>
                                 <option value="<?php echo $row->id ?>">
-                                    <?php echo $row->firstname ?>
+                                    <?php echo $row->firstname.' '.$row->lastname ?>
                                 </option>
                             <?php } ?>
                         </select>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Regresar</button>
                             <button type="submit" class="btn btn-primary">Guardar Datos</button>
                         </div>
 
@@ -273,7 +275,7 @@
                                 <input type="text" class="form-control" id="" placeholder="Nombre de la mascota" name="mascota">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Direccion</label>
-                                    <input type="text" class="form-control" id="" placeholder="direccion" name="bio">
+                                    <input type="text" class="form-control" id="" placeholder="direccion" name="direccion">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
