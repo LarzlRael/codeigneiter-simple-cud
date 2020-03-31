@@ -16,7 +16,7 @@
     <div class="container">
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevo_usuario_mascota">
-            Añadir Usuario Mascota
+            Añadir Usuario y Mascota
         </button>
 
         
@@ -251,7 +251,7 @@
                     <form method="post" action="/CrudController/agregar_mascota_usuario">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nombre</label>
-                            <input type="text" class="form-control" id="" placeholder="Firstname" name="firstname">
+                            <input type="text" class="form-control" id="" placeholder="Nombre" name="firstname">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Apellido</label>
@@ -259,15 +259,15 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Fecha de nacimiento</label>
-                            <input type="date" class="form-control" id="" placeholder="Birthdate" name="birthdate">
+                            <input type="date" class="form-control" id="" placeholder="Fecha de nacimiento" name="birthdate">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Informacion de contacto</label>
-                            <input type="text" class="form-control" id="" placeholder="Contact" name="contacto">
+                            <input type="text" class="form-control" id="" placeholder="Contacto" name="contacto">
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Biografia</label>
-                            <input type="text" class="form-control" id="" placeholder="Biografica" name="bio">
+                            <label for="exampleFormControlInput1">Descripcion</label>
+                            <input type="text" class="form-control" id="" placeholder="Descripcion" name="bio">
                             <hr>
                             <h2>Datos mascota</h2>
                             <div class="form-group">

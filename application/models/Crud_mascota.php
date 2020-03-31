@@ -41,7 +41,7 @@ class Crud_mascota extends CI_Model
         );
         $this->db->where('id', $id);
         $this->db->update('usuarios', $data);
-        //cambios de ultima hora dentro del git me
+        //cambios de ultima hora dentro del git me  
     }
     public function delete_mascota($id)
     {
@@ -62,7 +62,6 @@ class Crud_mascota extends CI_Model
         $data = array(
             'nombre_mascota' => $this->input->post('nombre_mascota'),
             'direccion' => $this->input->post('direccion'),
-
         );
         $this->db->where('idmascota', $id);
         $this->db->update('mascota', $data);
@@ -73,7 +72,6 @@ class Crud_mascota extends CI_Model
             'nombre_mascota' => $this->input->post('nombre_mascota'),
             'direccion' => $this->input->post('direccion'),
             'idusuario' => $this->input->post('idusuario'),
-
         );
         $this->db->insert('mascota', $data);
     }

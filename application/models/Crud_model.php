@@ -65,7 +65,7 @@ class Crud_model extends CI_Model
         $direccion = $this->input->post('direccion');
 
 
-        $query = $this->db->query("CALL agregar_usuarioo_mascota('$lastname','$firstname','$birthdate','$contacto','$bio','$mascota',
+        $query = $this->db->query("CALL agregar_usuario_mascota('$lastname','$firstname','$birthdate','$contacto','$bio','$mascota',
         '$direccion')");
         if ($query) {
             echo 'success';
